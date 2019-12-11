@@ -30,6 +30,11 @@ void warnx(const char *, ...);
 #endif
 
 
+#ifdef __APPLE__
+#undef HAVE_STRNCPY
+#define HAVE_STRNCPY 1
+#endif
+
 #if !HAVE_STRNCPY
 size_t strlcpy(char *, const char *, size_t);
 #endif

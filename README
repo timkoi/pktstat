@@ -1,3 +1,20 @@
+This is a modified version of pktstat that compiles and works on macOS.
+
+To build, install GNU autotools from MacPorts, then:
+
+$ git clone https://github.com/timkoi/pktstat
+$ cd pktstat
+$ autoreconf
+$ ./configure --prefix=/opt/pktstat
+$ make
+$ sudo make install
+$ sudo ln -vs /opt/pktstat/bin/pktstat /usr/local/bin/pktstat
+
+To uninstall, run:
+
+$ sudo rm -rvf /opt/pktstat /usr/local/bin/pktstat
+
+Original readme:
 
 HELLO
 
